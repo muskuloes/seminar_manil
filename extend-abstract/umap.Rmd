@@ -24,7 +24,7 @@ We shall start by intuitively defining some of the theoretical building blocks a
 
 1. **Global and Local structure:** Global structure refers to the separation between clusters, while local structure would represent the separation within clusters.
 
-2. **k-simplex:** A `k` dimensional simplex is built by connecting `k + 1` points, i.e., a data point is a 0-simplex, a 1-simplex is a line segment between 2 points, a 2-simplex is a triangle (with 1-simplices as faces).
+2. **K-simplex:** A `k` dimensional simplex is built by connecting `k + 1` points, i.e., a data point is a 0-simplex, a 1-simplex is a line segment between 2 points, a 2-simplex is a triangle (with 1-simplices as faces).
 
 3. **Open cover:** An open cover is a family of sets (set of simplices) whose union is the whole set (manifold).
 
@@ -32,7 +32,7 @@ We shall start by intuitively defining some of the theoretical building blocks a
 
 5. **Čech complex:** A way of building an abstract simplicial complex through the intersection of sets (cover).
 
-6. **Vietoris-Rips Complex:** Just like the Čech complex but solely determined by 0- and 1-simplices. It is computationally easier to work with particularly for large datasets.
+6. **Vietoris-Rips complex:** Just like the Čech complex but solely determined by 0- and 1-simplices. It is computationally easier to work with particularly for large datasets.
 
 A way to approximate an open cover of a topological space is to create balls of fixed radius about each data point. The simplicial complex will then be formed by connecting intersecting balls with a straight line (e.g., two intersecting balls will form a 1-simplex, while 3 intersecting balls will form a 2-simplex, and so on). However, 0- and 1-simplices are the dominant constituents of the simplicial complex. Which motivates the use Vietoris-Rips complexes. See [@deepgpair] for a visual representation of a simplicial complex.
 
