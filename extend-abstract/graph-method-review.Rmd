@@ -1,0 +1,14 @@
+---
+title: "Abstract Review: An Introduction to Graph-based Dimensionality Reduction"
+author: "Victor Tuekam"
+date: "January, 2020"
+output: pdf_document
+---
+
+The extended abstract by Christoph Luther provides a nice introduction to two graph-based non-linear dimensionality reduction techniques, mainly, Isomap and Laplacian Eigenmaps (LEM). Both algorithms assume that the data lie in a manifold of lower dimensionality than the space they are observed in. After a short motivation for dimensionality reduction on high dimensional data, Christoph Luther describes the principles behind these techniques.
+
+The notion of a graph as a set of vertices and edges as a way of representing data is key to both Isomap and LEM. Christoph explains that a weighted, undirected graph is built from the data, where the data points represent the nodes, the edges are either formed by a point's $k$ nearest neighbors or a set of points in an  $\epsilon-$neighborhood and the weigths on the edges come from a (dis-)similarity measure between points.
+
+Furthermore it is explained in the extended abstract that for the Isomap algorithm an $n \times n$ matrix of pairwise geodesic distances between points is constructed from the graph's weighted edges. Multidimensional scaling (MDS) is then used to provide an low dimensional representation of the data using this matrix. On the other hand, LEM minimizes a certain criterion to produce a lower dimensional embedding. This criterion basically makes sure that closer points in the high dimensional ambient space are closer together in the embedding space. This makes the LEM method a local method, while Isomap is a global method, since it builds on top of MDS which is itself global. Christoph adds that the minimization problem is converted to an eigenvalue problem using a so called *laplacian matrix*. The $d$ smallest positive eigenvectors of this matrix represent the axis along which the data is embedded, but are themselves not the embedded points (which was suggested in the extended abstract, but I believe that was a mistake).
+
+Finally, Christoph lays out the proceedings for the presentation and final essay, which I very much look forward to.
