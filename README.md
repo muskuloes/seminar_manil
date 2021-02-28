@@ -1,4 +1,5 @@
 ```sh
+pipenv shell
 pipenv install
 bash generate_embeddings.sh
 ```
