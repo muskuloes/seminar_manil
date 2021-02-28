@@ -27,14 +27,18 @@ def plot_embedding(args):
     if d == 2:
         fig = plt.figure()
         ax = fig.add_subplot(111)
-        ax.scatter(X[:, 0], X[:, 1], c=y.astype('category').cat.codes, cmap=plt.cm.Spectral)
+        scatter = ax.scatter(X[:, 0], X[:, 1], c=y, cmap=plt.cm.Spectral)
+        legend = ax.legend(*scatter.legend_elements(), loc="upper left")
+        ax.add_artist(legend)
         plt.title(f'2d {args.title}')
         plt.savefig(f'output/{args.storage_name}_2d.png', dpi=300)
 
     elif d == 3:
         fig = plt.figure()
         ax = fig.add_subplot(111, projection='3d')
-        ax.scatter(X[:, 0], X[:, 1], X[:, 2], c=y.astype('category').cat.codes, cmap=plt.cm.Spectral)
+        scatter = ax.scatter(X[:, 0], X[:, 1], X[:, 2], c=y, cmap=plt.cm.Spectral)
+        legend = ax.legend(*scatter.legend_elements(), loc="upper left")
+        ax.add_artist(legend)
         plt.title(f'3d {args.title}')
         plt.savefig(f'output/{args.storage_name}_3d.png', dpi=300)
 

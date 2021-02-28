@@ -11,4 +11,6 @@ The notion of a graph as a set of vertices and edges as a way of representing da
 
 Furthermore it is explained in the extended abstract that for the Isomap algorithm an $n \times n$ matrix of pairwise geodesic distances between points is constructed from the graph's weighted edges. Multidimensional scaling (MDS) is then used to provide an low dimensional representation of the data using this matrix. On the other hand, LEM minimizes a certain criterion to produce a lower dimensional embedding. This criterion basically makes sure that closer points in the high dimensional ambient space are closer together in the embedding space. This makes the LEM method a local method, while Isomap is a global method, since it builds on top of MDS which is itself global. Christoph adds that the minimization problem is converted to an eigenvalue problem using a so called *laplacian matrix*. The $d$ smallest positive eigenvectors of this matrix represent the axis along which the data is embedded, but are themselves not the embedded points (which was suggested in the extended abstract, but I believe that was a mistake).
 
-Finally, Christoph lays out the proceedings for the presentation and final essay, which I very much look forward to.
+Finally, Christoph lays out the proceedings for the presentation and final essay.
+
+That summarizes what I got out of Christoph's abstract. I found it generally to be very well written and clear. I look forward to presentation and essay.
