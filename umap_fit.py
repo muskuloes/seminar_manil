@@ -31,7 +31,7 @@ def fit_embedding(args):
     y = data["y"]
 
     data.drop(["y"], axis=1, inplace=True)
-    reducer = umap.UMAP(n_components=args.d)
+    reducer = umap.UMAP(n_neighbors=30, min_dist=0.3, n_components=args.d)
     reducer.fit(data)
     embedding = reducer.transform(data)
 
